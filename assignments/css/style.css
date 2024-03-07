@@ -32,6 +32,8 @@ nav ul {
   display: flex;
   list-style: none;
   justify-content: center;
+  margin: 0;
+  padding: 0 30px;
   gap: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -60,11 +62,37 @@ main {
 }
 
 aside img {
+  max-width: 250px;
   border: 6px solid rgb(48,110,193);
   border-radius: 100%;
   object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
 
 footer {
   padding-bottom: 20px;
+}
+
+/* Mobile Styles */
+
+@media (max-width: 720px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  main {
+    grid-template-columns: auto;
+    row-gap: 0;
+  }
+
+  aside {
+    order: -1;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  aside img {
+    width: 90%;
+  }
 }
