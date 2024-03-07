@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/noise_lines.png);
+  background-position: right bottom;
+  max-width: 960px;
+  width: 100%;
+  margin-left: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-right: auto;
+}
+
+header {
+  background-color: rgb(48,110,193);
+  background-image: 
+    radial-gradient(at 0% 50%, rgba(48,110,193,1) 35%, rgba(48,110,193,0) 100%),                            url("https://images.unsplash.com/photo-1578070181910-f1e514afdd08");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 35px 25px;
+}
+
+nav {
+  background-color: #333;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+nav ul li {}
+nav ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 16px;
+  background-color: #222;
+  border-radius: 12px;
+  min-width: 120px;
+  text-align: center;
+  transition: background-color 0.25s cubic-bezier(.56,.4,.47,1.27);
+}
+
+nav ul li a:hover {
+  background-color: #000;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 30px;
+}
+
+aside img {
+  border: 6px solid rgb(48,110,193);
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+footer {
+  padding-bottom: 20px;
+}
