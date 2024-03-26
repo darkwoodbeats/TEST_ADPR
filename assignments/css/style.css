@@ -95,13 +95,19 @@ ul.photo-gallery {
   gap: 15px;
   margin: 0;
   padding: 0;
-  max-height: 500px;
+  /* max-height: 500px; */
 }
 
 .photo-gallery li {
   list-style: none;
   line-height: 0;
   overflow: hidden;
+  min-height: 200px;
+  min-width: 200px;
+  background-color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .photo-gallery li:nth-child(1) {
