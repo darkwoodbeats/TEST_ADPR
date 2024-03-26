@@ -28,6 +28,32 @@ header {
 nav {
   background-color: #333;
 }
+  #mobile-btn {
+    display: none;
+    font-size: 0;
+    width: 42px;
+      border: none;
+     background-color: transparent;
+    margin-left: auto;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 12px;
+    
+  }
+
+#mobile-btn:hover {
+  opacity: 0.65;
+}
+
+#mobile-btn .bar {
+  display: block;
+  margin-bottom: 4px;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+}
 nav ul {
   display: flex;
   list-style: none;
@@ -38,6 +64,7 @@ nav ul {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 nav ul li {}
 nav ul li a {
   display: block;
@@ -48,11 +75,11 @@ nav ul li a {
   border-radius: 12px;
   min-width: 120px;
   text-align: center;
-  transition: background-color 0.25s cubic-bezier(.56,.4,.47,1.27);
+  transition: all 0.33s ease;
 }
 
 nav ul li a:hover {
-  background-color: #000;
+  background-color: #999;
 }
 
 main {
@@ -60,19 +87,6 @@ main {
   grid-template-columns: 4fr 1fr;
   gap: 30px;
 }
-
-aside {
-  margin-top: 30px;
-}
-
-aside img {
-  max-width: 250px;
-  border: 6px solid rgb(48,110,193);
-  border-radius: 100%;
-  object-fit: cover;
-  aspect-ratio: 1 / 1;
-}
-
 
 ul.photo-gallery {
   display: grid;
@@ -113,6 +127,18 @@ ul.photo-gallery {
   object-position: top;
 }
 
+aside {
+  margin-top: 30px;
+}
+
+aside img {
+  max-width: 250px;
+  border: 6px solid rgb(48,110,193);
+  border-radius: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
 footer {
   padding-bottom: 20px;
 }
@@ -120,9 +146,20 @@ footer {
 /* Mobile Styles */
 
 @media (max-width: 720px) {
+  #mobile-btn {
+    display: block;
+  }
+  
   nav ul {
+    display: none;
     flex-direction: column;
     gap: 15px;
+  }
+  
+  /* when active */
+
+  nav ul.active {
+    display: flex;
   }
   
   main {
@@ -136,6 +173,55 @@ footer {
   }
   
   aside img {
-    width: 90%;
+    width: 90%; 
   }
+}
+
+/* Card styles */
+
+.card-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+  margin-bottom: 40px;
+  
+}
+
+.card {
+/*   display: inline-block; */
+/*   flex: 0 1 200px; */
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-heading {
+  margin-top: 0;
+}
+
+.card-subtitle {
+  color: #888;
+}
+
+.card-img {
+/*   display: block; */
+  width: 100%;
+}
+
+.card-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: rgb(48,110,193);
+  color: #fff;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.card-btn:hover {
+  background-color: rgb(68,130,213);
 }
