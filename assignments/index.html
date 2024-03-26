@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js"></script>
   <title>Caleb Wiedel | Interactive Media Design</title>
 </head>
 <body>
@@ -175,6 +174,18 @@
   <footer>
     <p>&copy; 2024 Caleb Wiedel</p>
   </footer>
+
+  <!-- Javascript -->
+  <script>
+    // Mobile Button Interaction
+    const toggleBtn = document.getElementById('mobile-btn');
+    const naviList = document.getElementById('navi-list');
+
+    console.log(toggleBtn);
+    console.log(naviList);
+
+    toggleBtn.addEventListener('click', () => { naviList.classList.toggle("active"); });
+  </script>
 
 </body>
 </html>
