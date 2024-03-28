@@ -3,7 +3,10 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/noise_lines.png);
   background-position: right bottom;
   max-width: 960px;
