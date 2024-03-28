@@ -28,6 +28,10 @@ header {
   padding: 35px 25px;
 }
 
+header h1 {
+  font-weight: 600;
+}
+
 nav {
   background-color: #333;
 }
