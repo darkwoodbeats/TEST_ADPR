@@ -19,7 +19,7 @@
     .context {
       width: 100%;
       position: absolute;
-      top: 50vh;
+      top: 30vh;
     }
 
     .context h1 {
@@ -147,6 +147,35 @@
       animation-duration: 11s;
     }
 
+    .contact-form {
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+
+    .contact-form p {
+      margin-bottom: 20px;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 8px;
+      color: #fff;
+    }
+
+    .contact-form button {
+      border: none;
+      padding: 12px 20px;
+      text-transform: uppercase;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
     @keyframes animate {
       0% {
         transform: translateY(0) rotate(0deg);
@@ -185,33 +214,30 @@
 
 
     <!-- Form -->
-    <form name="contact" method="POST" netlify>
-      <p>
-        <label>Your Name: <input type="text" name="name" /></label>
-      </p>
-      <p>
-        <label>Your Email: <input type="email" name="email" /></label>
-      </p>
-      <p>
-        <label>Your Role: <select name="role[]" multiple>
-            <option value="leader">Leader</option>
-            <option value="follower">Follower</option>
-          </select></label>
-      </p>
-      <p>
-        <label>Message: <textarea name="message"></textarea></label>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
-    </form>
-
-
+    <div class="contact-form">
+      <form name="contact" method="POST" netlify>
+        <p>
+          <label>Your Name: <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Your Email: <input type="email" name="email" /></label>
+        </p>
+        <p>
+          <label>Your Role: <select name="role[]" multiple>
+              <option value="leader">Leader</option>
+              <option value="follower">Follower</option>
+            </select></label>
+        </p>
+        <p>
+          <label>Message: <textarea name="message"></textarea></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+    </div>
+    
   </div>
-
-
-
-
 </body>
 
 </html>
