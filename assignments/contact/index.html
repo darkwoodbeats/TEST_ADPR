@@ -179,6 +179,18 @@
       cursor: pointer;
     }
 
+    .hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+
+
     @keyframes animate {
       0% {
         transform: translateY(0) rotate(0deg);
@@ -218,9 +230,14 @@
 
     <!-- Form -->
     <div class="contact-form">
-      <form name="contact" method="POST" netlify>
+      <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
         <p>
           <label>Your Name: <input type="text" name="name" /></label>
+        </p>
+        <p class="hidden">
+          <label>
+            Don’t fill this out if you’re human: <input name="bot-field" />
+          </label>
         </p>
         <p>
           <label>Your Email: <input type="email" name="email" /></label>
