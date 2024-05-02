@@ -179,15 +179,9 @@
       cursor: pointer;
     }
 
-    .hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      border: 0;
+    .spam-prevent {
+      display: flex;
+      justify-content: center;
     }
 
 
@@ -247,7 +241,7 @@
           <label>Message: <textarea name="message"></textarea></label>
         </p>
         <p>
-          <div data-netlify-recaptcha="true"></div>
+          <div class="spam-prevent" data-netlify-recaptcha="true"></div>
         </p>
         <p>
           <button type="submit">Send</button>
